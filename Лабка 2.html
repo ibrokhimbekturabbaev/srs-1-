@@ -1,0 +1,282 @@
+<!--Задания 1-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Задание 1 — Grid</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      gap: 20px;
+    }
+    .grid-left { background: #0fd945; padding: 20px; }
+    .grid-right { background: #0940cc; padding: 20px; }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-left">Левая колонка 30%</div>
+    <div class="grid-right">Правая колонка 70%</div>
+  </div>
+</body>
+</html>
+<!--Задания 2-->
+  <br><title>Задание 2 — Flexbox карточка</title>
+  <style>
+    .product-card {
+      display: flex;
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+    .product-card img {
+      width: 150px;
+      margin-right: 20px;
+    }
+    .product-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .product-info button {
+      align-self: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="product-card">
+    <img src="https://s.f.kz/prod/3116/3115541_550.jpg" alt="Наушники">
+    <div class="product-info">
+      <p>Отличные наушники с качественным звуком.</p>
+      <button>Купить</button>
+    </div>
+  </div>
+</body>
+</html>
+<!--Задания 3-->
+ <br> <title>Задание 3 — Hover</title>
+  <style>
+    a {
+      color: blue;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+  </style>
+  <p><a href="#">Наведи на меня</a></p>
+</body>
+</html>
+<!--Задания 4-->
+  <title>Задание 4 — Градиент</title>
+  <style>
+    .gradient-section {
+      background: linear-gradient(45deg, #ff7e5f, #feb47b);
+      padding: 50px;
+    }
+    .gradient-text {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 8px;
+    }
+  </style>
+  <section class="gradient-section">
+    <div class="gradient-text">
+      <h2>Заголовок на градиенте</h2>
+      <p>Текст с полупрозрачным фоном.</p>
+    </div>
+  </section>
+</body>
+</html>
+<!--Задания 5-->
+ <br> <title>Задание 5 — Адаптивное меню</title>
+  <style>
+    .menu {
+      background: #343a40;
+      padding: 10px;
+      color: white;
+    }
+    .menu a {
+      color: white;
+      margin: 0 10px;
+    }
+    .menu-button {
+      display: none;
+      background: #495057;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .menu nav { display: none; }
+      .menu-button { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <div class="menu-button">Меню</div>
+    <nav>
+      <a href="#">Главная</a>
+      <a href="#">О нас</a>
+      <a href="#">Контакты</a>
+    </nav>
+  </div>
+</body>
+</html>
+<!--Задания 6-->
+ <br> <title>Задание 6 — Анимация кнопки</title>
+  <style>
+    .animated-btn {
+      padding: 10px 20px;
+      background: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .animated-btn:hover {
+      animation: jump 0.5s;
+      background: #218838;
+    }
+    @keyframes jump {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <button class="animated-btn">Наведи на меня</button>
+</body>
+</html>
+<!--Задания 7-->
+  <br> <title>Задание 7 — Форма входа</title>
+  <style>
+    .login-form {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    .login-form input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    .login-form input:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px #007bff;
+    }
+    .login-form button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    .login-form button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <form class="login-form">
+    <h3>Вход</h3>
+    <input type="text" placeholder="Логин">
+    <input type="password" placeholder="Пароль">
+    <button type="submit">Войти</button>
+  </form>
+</body>
+</html>
+<!--Задания 8-->
+ <br> <title>Задание 8 — nth-child</title>
+  <style>
+    .styled-list li:nth-child(2n) {
+      background: #2a76d3;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <ul class="styled-list">
+    <li>Элемент 1</li>
+    <li>Элемент 2</li>
+    <li>Элемент 3</li>
+    <li>Элемент 4</li>
+    <li>Элемент 5</li>
+  </ul>
+</body>
+</html>
+<!--Задания 9-->
+  <title>Задание 9 — BEM product</title>
+  <style>
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    .product__title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .product__price {
+      color: green;
+      font-size: 18px;
+    }
+    .product--highlight {
+      border-color: orange;
+      background: #fff3cd;
+    }
+  </style>
+</head>
+<body>
+  <div class="product product--highlight">
+    <div class="product__title">Смартфон</div>
+    <div class="product__price">120 000 тг.</div>
+  </div>
+</body>
+</html>
+<!--Задания 10-->
+  <title>Задание 10 — Sticky header</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background: #007bff;
+      color: white;
+      padding: 15px;
+      border-bottom: 3px solid #0056b3;
+    }
+    .content {
+      height: 2000px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sticky-header">
+    Sticky Header — всегда сверху при прокрутке
+  </div>
+  <div class="content">
+    <p>Прокручивай страницу вниз, чтобы проверить работу sticky-header.</p>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
